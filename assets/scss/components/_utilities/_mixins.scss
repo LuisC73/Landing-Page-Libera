@@ -1,0 +1,45 @@
+@mixin flex($justify, $align, $direction, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin grid($columns, $size, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($columns, $size);
+  gap: 0;
+}
+
+@mixin responsive($dispositive) {
+  @if $dispositive == "Mobile" {
+    @media (min-width: 320px) {
+      @content;
+    }
+  }
+
+  @if $dispositive == "Tablet" {
+    @media (min-width: 481px) {
+      @content;
+    }
+  }
+
+  @if $dispositive == "Laptops" {
+    @media (min-width: 769px) {
+      @content;
+    }
+  }
+
+  @if $dispositive == "Desktop" {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+
+  @if $dispositive == "Tv" {
+    @media (min-width: 1201px) {
+      @content;
+    }
+  }
+}
