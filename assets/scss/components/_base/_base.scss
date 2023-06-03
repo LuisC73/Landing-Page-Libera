@@ -1,0 +1,9 @@
+@use "../_utilities/variables" as *;
+@use "../_utilities/variables" as *;
+
+.body {
+  font-family: $font-light;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}

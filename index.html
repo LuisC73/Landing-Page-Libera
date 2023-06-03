@@ -4,16 +4,101 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página Libera</title>
+    <meta name="description" content="Página web de proyecto Transmedia Libera" />
+    <title>Libera</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://i.postimg.cc/zDV9CNqr/qbo-producciones-logo.png"
+    />
   </head>
-  <body>
-    <header>
-      <nav>
-        <ul></ul>
+  <body class="body">
+    <header class="header">
+      <nav class="navbar">
+        <div class="navbar__text">
+          <p class="navbar__p">Producido por:</p>
+          <img
+            src="https://i.postimg.cc/zDV9CNqr/qbo-producciones-logo.png"
+            alt="Logo"
+            class="navbar__img"
+          />
+        </div>
+        <div class="navbar__container">
+          <ul class="navbar__list">
+            <li class="navbar__item"><a href="#Home" class="navbar__link">Inicio</a></li>
+            <li class="navbar__item"><a href="#Transmedia" class="navbar__link">Transmedia</a></li>
+            <li class="navbar__item"><a href="#Marking" class="navbar__link">Marking of</a></li>
+            <li class="navbar__item">
+              <a href="./assets/docs/Proyecto Transmedia.pdf" class="navbar__a" download
+                >Media Kit</a
+              >
+            </li>
+          </ul>
+          <div class="navbar__list-icons">
+            <a href="#" class="navbar__social"> <i class="bx bxl-facebook-square"></i> </a>
+            <a href="#" class="navbar__social"><i class="bx bxl-instagram-alt"></i> </a>
+            <a href="#" class="navbar__social"><i class="bx bxs-envelope"></i></a>
+          </div>
+        </div>
       </nav>
     </header>
-    <main></main>
+    <main class="main">
+      <section class="home" id="Home">
+        <figure class="home__img-container">
+          <img
+            src="https://i.postimg.cc/sDZVBgdq/home-picture.jpg"
+            alt="Transmedia"
+            class="home__img"
+          />
+        </figure>
+        <div class="home__text">
+          <h1 class="home__title">
+            Soltar los miedos es liberar el alma, desnudarte ante ti mismo.
+          </h1>
+          <p class="home__paragraph">
+            Descubre su historia de vida y encuentra tú también tu medio de liberación.
+          </p>
+          <a href="#" class="home__button">
+            <img src="./assets/img/btn-enter.svg" alt="" />
+          </a>
+        </div>
+      </section>
+      <section class="content" id="Transmedia">
+        <h2 class="content__">Transmedia</h2>
+        <p>
+          La idea con esta forma de narrativa, es contar y mostrar aspectos de la historia de Tania
+          por distintos medios, para mejorar la comodidad y la accesibilidad para los usuarios,
+          quienes quieran conocer más sobre nuestra protagonista, persona el cual tiene un mensaje
+          muy bonito para el provecho de quienes consuman nuestro contenido y entienda lo beneficioso
+          que sería aplicar la liberación en su vida diaria.
+        </p>
+        <h3>Serie de contenidos:</h3>
+        <p>
+          <span>Reel 1: </span>
+          Como primer paso pensamos en una idea para hacer un llamado a la acción, quisimos hacer un
+          reel en Instagram tipo expectativa para llamar la atención del público de Tania ya que es
+          allí donde se alberga la mayoría.
+        </p>
+        <p>
+          <span>Historias en instagram interactivas: </span>
+          En la cuenta oficial de Tania se hicieron preguntas a sus seguidores, tipo “cajitas de
+          comentarios” o encuestas: ¿Ya viste mi nueva publicación? ¿Quieren conocerme un poco más?,
+          ¿Qué creen que les tengo preparado?, etc. Para así tener un tipo de contacto con ellos.
+        </p>
+        <p>
+          <span>Micro documental: </span>
+          En esta pieza audiovisual entramos a conocer a Tania, nos cuenta un poco de su vida y nos
+          muestra ideológicamente el baile como el arte de vencer los miedos, de soltarlos y sentir
+          como si fuera ese refugio que aleja a nuestros monstruos internos y externos.
+        </p>
+      </section>
+      <section class="content" id="Marking">
+        <h2 class="content__">Making of</h2>
+        <p>video</p>
+      </section>
+    </main>
 
     <script src="./assets/js/main.js"></script>
   </body>

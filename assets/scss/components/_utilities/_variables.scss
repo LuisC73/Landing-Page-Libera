@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Futura Light";
+  src: url("../fonts/Futura\ Book\ font.ttf");
+}
+
+@font-face {
+  font-family: "Futura Bold";
+  src: url("../fonts/Futura\ Heavy\ font.ttf ");
+}
+
+$color-primary: #00bf62;
+$color-secondary: #7c128e;
+$color-terciary: #557043;
+$color-thirty: #c49569;
+$color-white: #fff;
+$color-black: #000;
+
+$font-light: "Futura Light", sans-serif;
+$font-bold: "Futura Bold", sans-serif;

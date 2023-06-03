@@ -1,0 +1,100 @@
+@use "../_utilities/mixins" as *;
+@use "../_utilities/variables" as *;
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 1fr;
+  width: 100vw;
+
+  @include responsive("Laptops") {
+    grid-template-rows: 60px 45px;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__p {
+    font-size: 1.3rem;
+    font-family: $font-light;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color-black;
+  }
+
+  &__img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .navbar__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    background-color: $color-primary;
+
+    @include responsive("Laptops") {
+      flex-direction: row;
+      gap: 0;
+      padding: 0px 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item:not(:first-of-type) {
+    @include responsive("Laptops") {
+      border-left: 2px solid $color-white;
+      padding-left: 12px;
+    }
+  }
+
+  &__link,
+  &__a {
+    padding-bottom: 1px;
+    border-bottom: 2px solid $color-white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: $font-light;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-white;
+
+    @include responsive("Laptops") {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__list-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  &__social {
+    font-size: 1.7rem;
+    color: $color-white;
+
+    @include responsive("Laptops") {
+      font-size: 3rem;
+    }
+  }
+}
