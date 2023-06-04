@@ -849,3 +849,50 @@ template {
 .control-audio i {
   pointer-events: none;
 }
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 7;
+}
+.loading__item::before {
+  content: "";
+  display: block;
+  height: 50px;
+  width: 50px;
+  border: 10px #00bf62 double;
+  border-left-style: solid;
+  border-radius: 100%;
+  -webkit-animation: spin 0.5s infinite linear;
+  animation: spin 0.5s infinite linear;
+}
+.loading.hide {
+  display: none;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,46 @@
+@use "../_utilities/mixins" as *;
+@use "../_utilities/variables" as *;
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-white;
+  z-index: 7;
+
+  &__item::before {
+    content: "";
+    display: block;
+    height: 50px;
+    width: 50px;
+    border: 10px $color-primary double;
+    border-left-style: solid;
+    border-radius: 100%;
+    -webkit-animation: spin 0.5s infinite linear;
+    animation: spin 0.5s infinite linear;
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

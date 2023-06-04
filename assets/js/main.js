@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const allSections = [...document.querySelectorAll("section")];
+  const loadingScreen = document.querySelector(".loading");
 
   function handleActiveSection(e) {
     let idBtn = e.target.getAttribute("href").split("#")[1];
@@ -37,6 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuList = document.querySelector(".navbar__list");
     menuList.classList.remove("active");
   }
+
+  setTimeout(() => loadingScreen.classList.add("hide"), 1500);
 
   document.addEventListener("click", (e) => {
     if (e.target.classList.contains("navbar__link")) handleActiveSection(e);
