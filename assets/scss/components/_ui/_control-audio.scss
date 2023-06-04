@@ -1,0 +1,26 @@
+@use "../_utilities/mixins" as *;
+@use "../_utilities/variables" as *;
+
+.control-audio {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: $color-primary;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-size: 1.5rem;
+  color: $color-white;
+  cursor: pointer;
+  z-index: 3;
+
+  & i {
+    pointer-events: none;
+  }
+}

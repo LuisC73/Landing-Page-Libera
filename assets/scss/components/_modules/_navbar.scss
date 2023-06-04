@@ -4,7 +4,7 @@
 .navbar {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: 60px 60px;
   width: 100vw;
 
   @include responsive("Laptops") {
@@ -31,12 +31,11 @@
     height: 70px;
   }
 
-  .navbar__container {
+  &__container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
     gap: 20px;
     padding: 25px;
     background-color: $color-primary;
@@ -49,37 +48,100 @@
   }
 
   &__list {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-    height: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 80vw;
+    height: 100vh;
     margin: 0;
-    padding: 0;
+    padding: 40px;
+    background-color: $color-bg;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: translateX(-100%);
+    transition: 0.5s;
     list-style: none;
+    z-index: 4;
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    @include responsive("Laptops") {
+      position: relative;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: row;
+      gap: 15px;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      box-shadow: none;
+      background: none;
+      transform: translateX(0);
+      z-index: 1;
+    }
   }
 
-  &__item:not(:first-of-type) {
+  &__toggle {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 3rem;
+    color: $color-white;
+
+    & i {
+      pointer-events: none;
+    }
+
+    @include responsive("Laptops") {
+      display: none;
+    }
+  }
+
+  &__item:not(:first-child) {
     @include responsive("Laptops") {
       border-left: 2px solid $color-white;
       padding-left: 12px;
     }
   }
 
+  &__item-button {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 3rem;
+    color: $color-black;
+
+    & i {
+      pointer-events: none;
+    }
+
+    @include responsive("Laptops") {
+      display: none;
+    }
+  }
+
   &__link,
   &__a {
     padding-bottom: 1px;
-    border-bottom: 2px solid $color-white;
-    font-size: 1.1rem;
+    border-bottom: 2px solid $color-primary;
+    font-size: 1.6rem;
     font-weight: bold;
     font-family: $font-light;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     text-decoration: none;
-    color: $color-white;
+    color: $color-black;
 
     @include responsive("Laptops") {
+      border-bottom: 2px solid $color-white;
       font-size: 1.4rem;
+      color: $color-white;
     }
   }
 
