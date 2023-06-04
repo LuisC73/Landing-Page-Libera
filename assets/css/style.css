@@ -826,7 +826,7 @@ template {
   font-size: 1.5rem;
   color: #fff;
   cursor: pointer;
-  z-index: 3;
+  z-index: 6;
 }
 .control-audio i {
   pointer-events: none;
