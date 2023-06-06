@@ -786,6 +786,10 @@ template {
     height: 400px;
   }
 }
+.content__video-container video {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .content__grid {
   width: 100%;
   display: -ms-grid;

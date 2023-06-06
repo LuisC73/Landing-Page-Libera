@@ -120,6 +120,10 @@
       width: 700px;
       height: 400px;
     }
+
+    & video{
+      object-fit: contain;
+    }
   }
 
   &__grid {
