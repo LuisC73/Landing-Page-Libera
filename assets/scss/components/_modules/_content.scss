@@ -93,6 +93,14 @@
 
   &__span {
     font-weight: bold;
+
+    &--block{
+      display: block;
+    }
+
+    &--margin{
+      margin-top: 10px;
+    }
   }
 
   &__p {
@@ -117,7 +125,7 @@
   &__grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 400px));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 295px));
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
   }
@@ -132,12 +140,37 @@
     &:hover img {
       transform: scale(1.02) rotate(1deg);
     }
+
+    &:hover figcaption{
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__item-img {
     width: 100%;
     height: 100%;
     transition: 0.5s;
+  }
+
+  &__item-text{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    padding: 0 10px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $color-white;
+    transform: translateY(110%);
+    z-index: 2;
+    transition: 0.3s ease-in-out;
+    
+  }
+
+  &__item-date{
+    font-size: 1.4rem;
+    color: $color-primary;
+    margin-bottom: 10px;
   }
 
   &__portada {
