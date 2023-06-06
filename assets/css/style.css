@@ -838,15 +838,15 @@ template {
 }
 .content__portada {
   width: 280px;
-  height: 300px;
+  height: 340px;
   -o-object-fit: fill;
      object-fit: fill;
   margin: 0 auto;
 }
 @media (min-width: 769px) {
   .content__portada {
-    width: 380px;
-    height: 460px;
+    width: 390px;
+    height: 570px;
   }
 }
 
