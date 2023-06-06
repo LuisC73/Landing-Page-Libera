@@ -94,11 +94,11 @@
   &__span {
     font-weight: bold;
 
-    &--block{
+    &--block {
       display: block;
     }
 
-    &--margin{
+    &--margin {
       margin-top: 10px;
     }
   }
@@ -111,6 +111,23 @@
     color: $color-black;
   }
 
+  &__link {
+    font-size: 1.5rem;
+    color: $color-primary;
+  }
+
+  &__qr {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+    object-fit: contain;
+
+    @include responsive("Laptops") {
+      width: 400px;
+      height: 400px;
+    }
+  }
+
   &__video-container {
     width: 240px;
     height: 240px;
@@ -121,7 +138,7 @@
       height: 400px;
     }
 
-    & video{
+    & video {
       object-fit: contain;
     }
   }
@@ -145,7 +162,7 @@
       transform: scale(1.02) rotate(1deg);
     }
 
-    &:hover figcaption{
+    &:hover figcaption {
       opacity: 1;
       transform: translateY(0);
     }
@@ -157,7 +174,7 @@
     transition: 0.5s;
   }
 
-  &__item-text{
+  &__item-text {
     position: absolute;
     bottom: 5px;
     left: 0;
@@ -168,10 +185,9 @@
     transform: translateY(110%);
     z-index: 2;
     transition: 0.3s ease-in-out;
-    
   }
 
-  &__item-date{
+  &__item-date {
     font-size: 1.4rem;
     color: $color-primary;
     margin-bottom: 10px;
