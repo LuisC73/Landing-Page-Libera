@@ -240,14 +240,28 @@ template {
   src: url("../fonts/Futura Heavy font.ttf ");
 }
 .body {
-  font-family: "Futura Light", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 105px 3fr;
+  grid-template-rows: 105px 3fr;
   width: 100vw;
   height: 100vh;
+  font-family: "Futura Light", sans-serif;
   overflow-x: hidden;
 }
 
 .audio {
   display: none;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
 }
 
 .navbar {
@@ -501,7 +515,7 @@ template {
     grid-template-columns: 2fr repeat(4, 1fr);
     -ms-grid-rows: (1fr)[3];
     grid-template-rows: repeat(3, 1fr);
-    height: 83.1vh;
+    overflow: hidden;
   }
   .home > *:nth-child(1) {
     -ms-grid-row: 1;
@@ -582,6 +596,8 @@ template {
     -ms-grid-column-span: 1;
     grid-column: 1/2;
     grid-row: 1/-1;
+    width: 462px;
+    height: 475px;
   }
 }
 .home__text {
@@ -732,7 +748,9 @@ template {
 }
 .content__container {
   width: 100%;
+  max-width: 1420px;
   height: 100%;
+  margin: 0 auto;
   padding: 120px 40px 40px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -808,13 +826,16 @@ template {
      object-fit: contain;
 }
 .content__grid {
-  width: 100%;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 295px));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 290px));
   -ms-grid-rows: 1fr 20px 1fr;
   grid-template-rows: repeat(2, 1fr);
+  place-content: center;
   gap: 20px;
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
 }
 .content__item-container {
   position: relative;

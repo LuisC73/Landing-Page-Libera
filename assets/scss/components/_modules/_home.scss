@@ -27,7 +27,7 @@
   @include responsive("Laptops") {
     grid-template-columns: 2fr repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    height: 83.1vh;
+    overflow: hidden;
   }
 
   &__img-container {
@@ -43,6 +43,8 @@
     @include responsive("Laptops") {
       grid-column: 1 / 2;
       grid-row: 1 / -1;
+      width: 462px;
+      height: 475px;
     }
   }
 
